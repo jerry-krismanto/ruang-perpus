@@ -56,8 +56,8 @@ async function handleClickEditButton(bookId) {
     // Ambil data buku dari server berdasarkan id, simpan hasilnya ke variabel currentBook
     // TODO: answer here
     const res = await fetch(`http://localhost:3333/books/${bookId}`);
-    const jsonData = await res.json();
-    currentBook = jsonData;
+    const data = await res.json();
+    currentBook = data;
     currentPage = "edit";
     loadPage();
     return;
